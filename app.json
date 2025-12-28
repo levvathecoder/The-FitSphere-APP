@@ -9,7 +9,13 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.aifitnessapp",
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "We need access to your steps, sleep, and heart rate to calculate your burnout score and tailor workouts.",
+        "NSHealthUpdateUsageDescription": "We use this to track your workout progress.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -38,11 +44,23 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "react-native-health",
+        {
+          "isClinicalDataEnabled": false
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c6705461-478d-4226-b4c6-4f05b9d674fd"
+      }
     }
   }
 }
